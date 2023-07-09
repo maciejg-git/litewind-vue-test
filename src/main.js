@@ -1,11 +1,11 @@
 import "tailwindcss/tailwind.css";
-import "vue-litewind/style.css" 
+import "vue-litewind/vue-litewind.css" 
 
 // import classes for all components
 
 // import "./styles/components.css";
-import "vue-litewind/vue-litewind.css";
-// import "vue-litewind/styles/button.css";
+import "vue-litewind/components.css";
+// import "vue-litewind/components/button.css";
 
 import { defineAsyncComponent } from "vue"
 import { componentPlugin, components, grid, directives } from "vue-litewind";
