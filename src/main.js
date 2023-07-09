@@ -4,7 +4,7 @@ import "vue-litewind/style.css"
 // import classes for all components
 
 // import "./styles/components.css";
-import "vue-litewind/components.css";
+import "vue-litewind/vue-litewind.css";
 // import "vue-litewind/styles/button.css";
 
 import { defineAsyncComponent } from "vue"
