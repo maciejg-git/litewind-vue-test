@@ -1,24 +1,19 @@
+import { defineAsyncComponent } from "vue"
+import { createApp } from 'vue'
+import App from './App.vue'
+import EventViewer from "./components/EventViewer.vue"
+import vSelectProp from "./components/vSelectProp.vue"
+
 import "tailwindcss/tailwind.css";
+
 import "vue-litewind/vue-litewind.css" 
-
-// import classes for all components
-
 // import "./styles/components.css";
 import "vue-litewind/components.css";
 // import "vue-litewind/components/button.css";
 
-import { defineAsyncComponent } from "vue"
 import { vueLitewind, components, grid, directives } from "vue-litewind";
-import EventViewer from "./components/EventViewer.vue"
-import vSelectProp from "./components/vSelectProp.vue"
-
-import { createApp } from 'vue'
-import App from './App.vue'
 
 let app = createApp(App);
-
-app.component("EventViewer", EventViewer)
-app.component("vSelectProp", vSelectProp)
 
 let exampleComponents = []
 
@@ -36,14 +31,15 @@ for (const path in examples) {
   app.component(file, defineAsyncComponent(examples[path]))
 }
 
+app.component("EventViewer", EventViewer)
+app.component("vSelectProp", vSelectProp)
 app.provide("examples", exampleComponents)
+app.provide("version", app.config.globalProperties._litewind_version)
 
 app.use(vueLitewind, {
   components,
   grid,
   directives,
 }); 
-
-app.provide("version", app.config.globalProperties._litewind_version)
 
 app.mount('#app')
