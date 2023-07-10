@@ -8,7 +8,7 @@ import "vue-litewind/components.css";
 // import "vue-litewind/components/button.css";
 
 import { defineAsyncComponent } from "vue"
-import { componentPlugin, components, grid, directives } from "vue-litewind";
+import { vueLitewind, components, grid, directives } from "vue-litewind";
 import EventViewer from "./components/EventViewer.vue"
 import vSelectProp from "./components/vSelectProp.vue"
 
@@ -38,10 +38,12 @@ for (const path in examples) {
 
 app.provide("examples", exampleComponents)
 
-app.use(componentPlugin, {
+app.use(vueLitewind, {
   components,
   grid,
   directives,
 }); 
+
+app.provide("version", app.config.globalProperties._litewind_version)
 
 app.mount('#app')
