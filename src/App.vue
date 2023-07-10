@@ -2,7 +2,6 @@
 import { inject } from "vue";
 
 let examples = inject("examples");
-let version = inject("version");
 
 document.documentElement.classList.add("dark");
 </script>
@@ -12,7 +11,7 @@ document.documentElement.classList.add("dark");
     <v-row>
       <v-col class="mx-auto max-w-screen-lg grow">
 
-        <h2 class="my-10 text-3xl font-bold">Vue-Litewind test page ({{ version }})</h2>
+        <h2 class="my-10 text-3xl font-bold">Vue-Litewind test page</h2>
 
         <template v-for="example in examples">
           <h4 class="text-xl font-semibold text-text-100">

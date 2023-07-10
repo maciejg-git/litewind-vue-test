@@ -34,7 +34,6 @@ for (const path in examples) {
 app.component("EventViewer", EventViewer)
 app.component("vSelectProp", vSelectProp)
 app.provide("examples", exampleComponents)
-app.provide("version", app.config.globalProperties._litewind_version)
 
 app.use(vueLitewind, {
   components,
