@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^3.3.4",
-    "vue-litewind": "^0.0.38"
+    "vue-litewind": "^0.0.40"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
