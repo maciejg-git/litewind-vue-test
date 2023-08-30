@@ -12,10 +12,7 @@
         Show simple popover
       </v-button>
     </template>
-    <v-card
-      style-card="shadow"
-      width="220px"
-    >
+    <v-card width="220px">
       <v-popover-header />
       <div class="p-5">This is popover.</div>
     </v-card>
@@ -37,10 +34,7 @@
         Show form popover
       </v-button>
     </template>
-    <v-card
-      style-card="shadow"
-      class="w-[250px]"
-    >
+    <v-card class="w-[250px]">
       <v-popover-header />
       <div class="flex flex-col gap-y-4 p-5">
         <div class="flex flex-col gap-y-1">
@@ -60,7 +54,7 @@
           ></v-input>
         </div>
         <v-button
-          style-button="small"
+          mod-button="size:small"
           class="ml-auto mt-2"
         >
           Login
@@ -86,8 +80,7 @@
       </v-button>
     </template>
     <v-card
-      base="flat-card"
-      style-card="shadow"
+      mod-card="preset:tooltip"
       class="w-[330px] p-7"
     >
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -103,11 +96,11 @@
   </v-popover>
   <!-- CUT START -->
   <v-tabs
-    base="material-tabs"
+    base="materialTabs"
     class="mt-10"
   >
     <v-tab name="Props">
-      <div class="flex flex-col gap-y-2 mt-5">
+      <div class="mt-5 flex flex-col gap-y-2">
         <div>
           <label for="placement">placement:</label>
           <v-select
@@ -171,7 +164,7 @@
       <template #name>
         Events
         <v-badge
-          style-badge="secondary tiny"
+          mod-badge="variant:secondary size:tiny"
           class="ml-2"
         >
           {{ events.length }}

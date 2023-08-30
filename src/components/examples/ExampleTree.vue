@@ -11,7 +11,7 @@
     <template #item-append="{ item }">
       <v-badge
         v-if="item.badge"
-        style-badge="tiny"
+        mod-badge="size:tiny"
         class="ml-2"
       >
         {{ item.badge }}
@@ -20,21 +20,21 @@
   </v-tree>
 
   <v-button
-    style-button="small"
+    mod-button="size:small"
     class="mr-4 mt-8"
     @click="treeRef.openAllLevel(9999)"
   >
     Open all
   </v-button>
   <v-button
-    style-button="small"
+    mod-button="size:small"
     @click="treeRef.closeAll()"
   >
     Close all
   </v-button>
   <!-- CUT START -->
   <v-tabs
-    base="material-tabs"
+    base="materialTabs"
     class="mt-10"
   >
     <v-tab name="Props">
@@ -127,7 +127,7 @@
       <template #name>
         Events
         <v-badge
-          style-badge="secondary tiny"
+          mod-badge="variant:secondary size:tiny"
           class="ml-2"
           update-animation="scale-up"
           :update-key="events.length"

@@ -1,9 +1,13 @@
 <script setup>
 import { inject } from "vue";
+import { provide } from "vue"
+import * as styles from "./styles/components"
 
 let examples = inject("examples");
 
 document.documentElement.classList.add("dark");
+
+provide("mods", styles)
 </script>
 
 <template>

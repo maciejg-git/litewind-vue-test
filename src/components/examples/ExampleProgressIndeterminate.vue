@@ -2,8 +2,8 @@
   <!-- simple indeterminate progress -->
 
   <v-progress
-    style-progress="tiny"
-    style-progress-bar="gradient"
+    mod-progress="size:tiny"
+    mod-progress-bar="variant:gradient"
     indeterminate
     :indeterminate-width="50"
     :indeterminate-timing="example.timing"
@@ -13,14 +13,11 @@
 
   <!-- simple indeterminate progress -->
 
-  <v-card
-    style-card="shadow"
-    width="400px"
-  >
+  <v-card width="400px">
     <div class="flex justify-center p-4">Checking for updates...</div>
     <v-progress
-      style-progress="tiny"
-      style-progress-bar="gradient"
+      mod-progress="size:tiny"
+      mod-progress-bar="variant:gradient"
       indeterminate
       class="m-2"
     ></v-progress>
@@ -30,17 +27,14 @@
 
   <div class="my-6">Combined indeterminate and deteminate example</div>
 
-  <v-card
-    style-card="shadow"
-    width="400px"
-  >
+  <v-card width="400px">
     <div class="flex justify-center p-4">
       <span v-if="example.indeterminate">Checking for updates...</span>
       <span v-if="!example.indeterminate">Updating...</span>
     </div>
     <v-progress
-      style-progress="tiny"
-      style-progress-bar="gradient"
+      mod-progress="size:tiny"
+      mod-progress-bar="variant:gradient"
       :value="example.value"
       :label="false"
       :indeterminate="example.indeterminate"

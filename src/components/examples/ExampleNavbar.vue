@@ -1,7 +1,7 @@
 <template>
   <v-card
     style="height: 600px"
-    style-card="transparent"
+    mod-card="variant:transparent"
   >
     <v-navbar class="py-2 px-4">
       <div class="flex items-center">
@@ -13,7 +13,6 @@
             <v-dropdown
               trigger="hover"
               :offset-y="2"
-              base="flat-dropdown"
             >
               <template #reference="{ reference, onTrigger }">
                 <v-button
@@ -26,8 +25,8 @@
                 </v-button>
               </template>
               <v-card
-                base="flat-card"
                 class="min-w-[300px] md:min-w-[420px]"
+                mod-card="preset:flatDropdown"
               >
                 <v-dropdown-menu-item tag="button">
                   <header class="font-semibold">Get started</header>

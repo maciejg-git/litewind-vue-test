@@ -1,9 +1,8 @@
 <template>
   <v-card
     width="320px"
-    style-card="shadow hoverable"
+    mod-card="effect:hoverScale variant:info"
     class="overflow-hidden mx-auto"
-    name="select-card"
   >
     <img
       :src="randomPhoto()"

@@ -8,7 +8,7 @@ import "tailwindcss/tailwind.css";
 
 import "vue-litewind/vue-litewind.css" 
 // import "./styles/components.css";
-import "vue-litewind/components.css";
+// import "vue-litewind/components.css";
 // import "vue-litewind/components/button.css";
 
 import { vueLitewind, components, grid, directives } from "vue-litewind";

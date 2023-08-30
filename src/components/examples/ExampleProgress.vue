@@ -7,8 +7,8 @@
 
   <v-progress
     v-bind="example"
-    style-progress="rounded"
-    style-progress-bar="red rounded"
+    mod-progress="shape:rounded"
+    mod-progress-bar="variant:red shape:rounded"
     class="mt-4"
   >
     <template #label="{ value, max }">
@@ -20,16 +20,16 @@
 
   <v-progress
     v-bind="example"
-    style-progress="tiny"
-    style-progress-bar="gradient"
+    mod-progress="size:tiny"
+    mod-progress-bar="variant:gradient"
     class="mt-4"
   ></v-progress>
 
   <!-- page load progress -->
 
   <v-progress
-    style-progress="tiny transparent"
-    style-progress-bar="gradient"
+    mod-progress="size:tiny variant:transparent"
+    mod-progress-bar="variant:gradient"
     :value="example.value"
     :label="false"
     :transition="example.transition"
@@ -37,7 +37,7 @@
   ></v-progress>
   <!-- CUT START -->
   <v-tabs
-    base="material-tabs"
+    base="materialTabs"
     class="mt-10"
   >
     <v-tab name="Props">
@@ -51,14 +51,14 @@
             v-model.number="example.value"
           ></v-input>
           <v-button
-            style-button="small"
+            mod-button="size:small"
             @click="example.value += 10"
             class="ml-2"
           >
             +10
           </v-button>
           <v-button
-            style-button="small"
+            mod-button="size:small"
             @click="example.value -= 10"
             class="ml-2"
           >
