@@ -5,7 +5,7 @@
       :label="example.label"
       :validationState="example.validationState"
       placeholder="Type something..."
-      class="h-[120px] w-[400px]"
+      class="h-[120px]"
     />
   </div>
 
@@ -18,7 +18,7 @@
       :label="example.label"
       :state="example.state"
       placeholder="Type something..."
-      class="h-[120px] w-[400px]"
+      class="h-[120px]"
     />
   </div>
   <!-- CUT START -->
@@ -51,26 +51,6 @@
             v-model="example.label"
           ></v-input>
         </div>
-        <div>
-          <label for="validation-state">validation state:</label>
-          <v-select
-            id="validation-state"
-            v-model="example.validationState"
-            inline
-            :items="[
-              {
-                text: 'component controlled (null)',
-                value: null,
-              },
-              {
-                text: 'empty string',
-                value: '',
-              },
-              'valid',
-              'invalid',
-            ]"
-          ></v-select>
-        </div>
       </div>
     </v-tab>
     <v-tab>
@@ -97,7 +77,6 @@ import { ref, reactive } from "vue";
 let example = reactive({
   model: "",
   label: "Textarea label",
-  validationState: "",
 });
 
 let events = ref([]);
