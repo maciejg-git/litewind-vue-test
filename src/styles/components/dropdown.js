@@ -1,11 +1,3 @@
-import { setStyleVar } from "./global"
-
-setStyleVar({
-  "--dropdown-transition-duration": "0.2s",
-  "--dropdown-transition-slide": "-15px",
-  "--dropdown-transition-scale": "0.2",
-})
-
 let dropdown = {
   item: {
     classes: `
@@ -27,7 +19,7 @@ let dropdown = {
         dark:text-text-300
         dark:focus:text-white
         dark:hover:bg-dark-700
-        dark:focus:bg-primary-500;
+        dark:focus:bg-primary-500
       `,
       active: `
         text-white
@@ -104,7 +96,14 @@ let relaxedDropdown = {
   }
 }
 
+let cssVariables = {
+  "--dropdown-transition-duration": "0.2s",
+  "--dropdown-transition-slide": "-15px",
+  "--dropdown-transition-scale": "0.2",
+}
+
 export default {
   dropdown,
   relaxedDropdown,
+  cssVariables,
 }

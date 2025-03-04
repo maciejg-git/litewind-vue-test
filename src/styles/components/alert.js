@@ -43,7 +43,7 @@ let alert = {
     shadow: {
       optional: true,
       medium: `
-        shadow-lg
+        shadow-md
         dark:shadow-black/20
       `
     },
@@ -108,6 +108,11 @@ let alert = {
   }
 }
 
+let cssVariables = {
+  "--alert-transition-duration": "0.4s",
+}
+
 export default {
   alert,
+  cssVariables,
 }

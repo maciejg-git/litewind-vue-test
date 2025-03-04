@@ -1,13 +1,5 @@
-import { setStyleVar } from "./global"
-
-setStyleVar({
-  "--select-transition-duration": "0.2s",
-  "--select-transition-slide": "-15px",
-  "--select-transition-scale": 0.2,
-  "--select-max-menu-height": "400px",
-})
-
 let select = {
+  item: {
     classes: `
       w-full
       text-left
@@ -23,10 +15,10 @@ let select = {
       `,
       dense: `
         py-2
-      `
+      `,
     },
     variant: {
-      default : `
+      default: `
         text-text-800
         dark:text-text-300
         hover:bg-secondary-100
@@ -45,17 +37,26 @@ let select = {
         bg-dark-200
         dark:text-text-300
         dark:bg-dark-600
-      `
+      `,
     },
     match: {
       highlight: `
         !font-semibold
         !bg-secondary-100
         dark:!bg-dark-600
-      `
+      `,
     },
+  },
+};
+
+let cssVariables = {
+  "--select-transition-duration": "0.2s",
+  "--select-transition-slide": "-15px",
+  "--select-transition-scale": 0.2,
+  "--select-max-menu-height": "400px",
 }
 
 export default {
-  select
-}
+  select,
+  cssVariables,
+};

@@ -1,5 +1,3 @@
-import { setStyleVar } from "./global"
-
 let progress = {
 
   /* element */
@@ -14,14 +12,17 @@ let progress = {
       `,
       tiny: `
         h-1
+      `,
+      medium: `
+        h-2
       `
     },
     shape: {
-      default: `
-        rounded
-      `,
       rounded: `
         rounded-full
+      `,
+      square: `
+        rounded-none
       `
     },
     variant: {
@@ -33,7 +34,29 @@ let progress = {
         bg-transparent
         dark:bg-transparent
       `
-    }
+    },
+    easing: {
+      optional: true,
+      inOut: `
+        [--progress-bar-indeterminate-timing:ease-in-out]
+      `,
+      out: `
+        [--progress-bar-indeterminate-timing:ease-out]
+      `
+    },
+    speed: {
+      optional: true,
+      fast: `
+        [--progress-bar-indeterminate-duration:1.2s]
+      `
+    },
+    width: {
+      optional: true,
+      long: `
+        [--progress-bar-indeterminate-width:80%]
+        [--progress-bar-indeterminate-scale:0.2]
+      `
+    },
   },
 
   /* element */
@@ -45,6 +68,9 @@ let progress = {
     shape: {
       rounded: `
         rounded-full
+      `,
+      square: `
+        rounded-none
       `
     },
     variant: {
@@ -76,13 +102,16 @@ let progress = {
   }
 }
 
-setStyleVar({
-  "--progress-bar-timing": "linear",
-  "--progress-bar-speed": "1.5s",
-  "--progress-bar-width": "50%",
-  "--progress-bar-direction": "normal",
-})
+let cssVariables = {
+  "--progress-bar-indeterminate-timing": "linear",
+  "--progress-bar-duration": "0.2s",
+  "--progress-bar-indeterminate-duration": "1.5s",
+  "--progress-bar-indeterminate-width": "50%",
+  "--progress-bar-indeterminate-scale": "1",
+  "--progress-bar-indeterminate-direction": "normal",
+}
 
 export default {
   progress,
+  cssVariables,
 }
